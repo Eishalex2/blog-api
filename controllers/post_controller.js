@@ -51,10 +51,12 @@ exports.post_create = [
       const post = new Post({
         title: req.body.title,
         content: req.body.content,
-        author: user
+        author: user._id
       });
       await Post.create(post);
-      res.json(post);
+      res.json({
+        post
+      });
     }
   })
 ]
