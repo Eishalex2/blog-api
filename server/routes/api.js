@@ -9,8 +9,8 @@ const verifyAdmin = require('../config/verifyAdmin');
 
 // Homepage
 router.get('/', function (req, res, next) {
-  res.send("Homepage");
-})
+  res.send("Cors added");
+});
 
 /// Posts ///
 

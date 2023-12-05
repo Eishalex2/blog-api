@@ -6,11 +6,14 @@ const logger = require('morgan');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const passport = require('./config/passport');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
 
 const app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
